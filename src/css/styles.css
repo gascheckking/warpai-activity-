@@ -1,0 +1,99 @@
+:root {
+  --accent: #00FFC3;
+  --bg: #0F172A;
+  --card: #1E293B;
+  --text: #F8FAFC;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  max-width: 375px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+button {
+  background: var(--accent);
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+section {
+  background: var(--card);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.gas-meter {
+  background: linear-gradient(to right, var(--success), var(--warning), var(--danger));
+  height: 8px;
+  border-radius: 4px;
+  position: relative;
+  margin: 0.5rem 0;
+}
+
+#needle {
+  background: white;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0%;
+  transition: left 0.3s ease;
+}
+
+.xp-bar {
+  background: rgba(255,255,255,0.1);
+  height: 10px;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+}
+
+#xpProgress {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 375px;
+  background: var(--card);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  border-top: 1px solid #333;
+}
+
+nav button {
+  background: none;
+  color: #aaa;
+  font-size: 1.2rem;
+  border: none;
+}
+
+nav button.active {
+  color: var(--accent);
+}
