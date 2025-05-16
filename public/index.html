@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=375, initial-scale=1.0" />
+  <title>WarpAI | Onchain Tracker</title>
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <meta property="fc:frame" content="vNext" />
+  <meta property="fc:frame:image" content="https://YOUR_VERCEL_URL/api/og" />
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- 🔹 HEADER -->
+    <header class="app-header">
+      <h1 class="logo">🛸 WarpAI</h1>
+      <p class="subtitle">Onchain Activity Tracker</p>
+      <div class="wallet-connect" id="walletBtn">Connect Wallet</div>
+    </header>
+
+    <!-- 🔹 GAS METER -->
+    <section class="gas-section">
+      <h2>⛽ Gaspris</h2>
+      <div class="gas-gauge">
+        <div class="gauge-track"></div>
+        <div class="gauge-needle" id="gasNeedle"></div>
+      </div>
+      <p class="gas-value" id="gasValue">–</p>
+    </section>
+
+    <!-- 🔹 XP SYSTEM -->
+    <section class="xp-card">
+      <h2>✨ Your WarpXP</h2>
+      <div class="xp-bar">
+        <div class="xp-progress" id="xpProgress"></div>
+      </div>
+      <p id="xpDisplay">0 XP</p>
+      <button class="claim-btn" id="claimBtn">Claim Daily XP</button>
+    </section>
+
+    <!-- 🔹 SNAPSHOT -->
+    <section class="snapshot-card">
+      <h2>📸 Snapshot</h2>
+      <p>Export your wallet status as image.</p>
+      <button class="snapshot-btn">Download Snapshot</button>
+    </section>
+
+    <!-- 🔹 ACTIVITY FEED -->
+    <section class="activity-feed">
+      <h2>📜 Onchain Activity</h2>
+      <div class="activity-list" id="activityList"></div>
+    </section>
+
+  </div>
+
+  <!-- 🔹 NAVIGATION -->
+  <nav class="tab-bar">
+    <button class="tab-button active">🏠 Home</button>
+    <button class="tab-button">📈 Track</button>
+    <button class="tab-button">🎁 Rewards</button>
+    <button class="tab-button">📊 Stats</button>
+    <button class="tab-button">👤 Profile</button>
+  </nav>
+
+  <!-- JS -->
+  <script src="/src/js/wallet.js"></script>
+  <script src="/src/js/gas.js"></script>
+  <script src="/src/js/xp-system.js"></script>
+  <script src="/src/js/activity.js"></script>
+</body>
+</html>
